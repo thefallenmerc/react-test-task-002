@@ -7,7 +7,7 @@ import SmallCard from './components/SmallCard';
 import MainCard from './components/MainCard';
 import SideCard from './components/SideCard';
 
-function App({ data, addTheData }) {
+function App({ data, selectData }) {
   return (
     <div className="App">
       <div className="container-fluid">
@@ -41,6 +41,16 @@ function App({ data, addTheData }) {
           </section>
           {/* sidebar-right */}
           <aside className="col-md-4 sidebar-right">
+            <div className="selected-period">
+              Selected Period:
+              <select onChange={() => {
+                selectData()
+              }}>
+                <option>Previous Month</option>
+                <option selected>This Month</option>
+                <option>Next Month</option>
+              </select>
+            </div>
             <div className="row">
               {
                 data.extraData.map((data, index) => (

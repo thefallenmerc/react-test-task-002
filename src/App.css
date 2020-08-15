@@ -97,6 +97,28 @@
 
 /* side card */
 
+.sidebar-right .selected-period {
+    color: white;
+    margin: 10px 0 5px;
+    text-align: center;
+}
+
+.sidebar-right .selected-period select {
+    border: 0;
+    margin-left: 5px;
+    background-color: transparent;
+    color: white;
+}
+
+.sidebar-right .selected-period select:focus {
+    outline: none;
+}
+
+
+.sidebar-right .selected-period select option {
+    color: black;
+}
+
 .side-card {
     color: white;
     border: none;

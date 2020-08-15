@@ -21,7 +21,7 @@ setInterval(() => {
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <App selectData={addDataToStore} />
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
