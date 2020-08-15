@@ -4,6 +4,13 @@
     background-color: palevioletred;
 }
 
+.header {
+    color: white;
+    font-size: 20px;
+    padding-top: 5px;
+    font-weight: bold;
+}
+
 .sidebar-right {
     background-color: rgb(12, 42, 62);
 }
@@ -12,6 +19,13 @@
     .sidebar-right {
         min-height: 100vh;
     }
+}
+
+.about {
+    padding-top: 5px;
+    color: white;
+    text-align: center;
+    font-size: 12px;
 }
 
 /* small card */
@@ -133,8 +147,6 @@
     fill: transparent;
 }
 
-/* .highcharts-credits { */
-
-/* display: none !important; */
-
-/* } */
+.highcharts-credits {
+    display: none !important;
+}

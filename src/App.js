@@ -14,6 +14,7 @@ function App({ data, addTheData }) {
         <div className="row">
           {/* section */}
           <section className="col-md-8">
+            <div className="header">React Test Task 002</div>
             {/* top cards */}
             <div className="row pt-2">
               <div className="col-md-3 col-sm-6 my-2">
@@ -48,6 +49,9 @@ function App({ data, addTheData }) {
                   </div>
                 ))
               }
+            </div>
+            <div className="about">
+              (c) Shubham Singh Chahar
             </div>
           </aside>
         </div>

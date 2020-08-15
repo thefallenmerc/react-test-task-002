@@ -14,6 +14,7 @@ addDataToStore();
 // to mock real time data
 setInterval(() => {
   // add data to store
+  // this can be called in an snapshot and be modified to take data as well
   addDataToStore();
 }, getRange(5000))
 

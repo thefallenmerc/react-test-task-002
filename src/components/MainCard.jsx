@@ -49,6 +49,9 @@ export default function MainCard({ data }) {
                                     lineWidth: 1,
                                     lineColor: '#666666'
                                 }
+                            },
+                            series: {
+                                animation: false,
                             }
                         },
                         series: [
