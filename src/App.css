@@ -70,6 +70,17 @@
     text-decoration: none;
 }
 
+.main-card>.card-body>.main-card-bottom {
+    background-color: palevioletred;
+    color: white;
+    display: flex;
+    border-radius: 6px;
+    padding: 3px 3px;
+    justify-content: space-around;
+    font-size: 11px;
+    margin-bottom: 10px;
+}
+
 /* side card */
 
 .side-card {
@@ -81,14 +92,49 @@
 }
 
 .side-card>.card-body {
-    padding: 5px 20px;
+    padding: 0px 20px;
 }
 
 .side-card>.card-body div:first-child {
     font-size: 15px;
     height: 17px;
-    color: rgb(31, 33, 33);
+    color: white;
     font-weight: bold;
     font-style: normal;
     text-decoration: none;
 }
+
+.side-card>.card-body>.value {
+    color: rgb(255, 255, 255);
+    font-family: proxima_nova_rgregular, Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-style: normal;
+    text-decoration: none;
+    font-size: 23.88px;
+    padding-top: 15.5px;
+    padding-bottom: 15.5px;
+}
+
+.side-card>.card-body>.side-card-bottom {
+    background-color: #314E60;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-around;
+    padding: 3px 6px;
+    margin-bottom: 11px;
+    font-size: 10px;
+    color: rgb(36, 184, 253);
+}
+
+/* high charts */
+
+.highcharts-background {
+    fill: transparent;
+}
+
+/* .highcharts-credits { */
+
+/* display: none !important; */
+
+/* } */

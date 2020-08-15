@@ -8,8 +8,14 @@ import { addData } from './redux/actions/data';
 import 'bootstrap/dist/css/bootstrap.css';
 import App from './App';
 
-// add data to store
+// initialize the store
 addDataToStore();
+
+// to mock real time data
+setInterval(() => {
+  // add data to store
+  addDataToStore();
+}, getRange(5000))
 
 ReactDOM.render(
   <React.StrictMode>
@@ -28,92 +34,93 @@ serviceWorker.unregister();
 
 function addDataToStore() {
   store.dispatch(addData({
-    "revenue": 590333,
-    "costs": 393194,
-    "netIncome": 197139,
-    "netIncomeCustomer": 432,
+    "revenue": getRange(590000),
+    "costs": getRange(300000),
+    "netIncome": getRange(200000),
+    "netIncomeCustomer": getRange(500),
     "mainData": [
       {
         "name": "Lead",
-        "cvi": [
-          "date": "2020-08-1",
-          "cost": 10,
-          "income": 13
-        ],
-        "total": 18.13,
-        "lastMonth": -5,
-        "target": 5,
+        "cvi": generateCVI(),
+        "total": getRange(20, 2),
+        "lastMonth": getRange(10),
+        "target": getRange(10),
       },
       {
         "name": "MQL",
-        "cvi": [
-          "date": "2020-08-1",
-          "cost": 10,
-          "income": 13
-        ],
-        "total": 18.13,
-        "lastMonth": -5,
-        "target": 5,
+        "cvi": generateCVI(),
+        "total": getRange(20, 2),
+        "lastMonth": getRange(10),
+        "target": getRange(10),
       },
       {
         "name": "SQL",
-        "cvi": [
-          "date": "2020-08-1",
-          "cost": 10,
-          "income": 13
-        ],
-        "total": 18.13,
-        "lastMonth": -5,
-        "target": 5,
+        "cvi": generateCVI(),
+        "total": getRange(20, 2),
+        "lastMonth": getRange(10),
+        "target": getRange(10),
       },
       {
         "name": "Customer",
-        "cvi": [
-          "date": "2020-08-1",
-          "cost": 10,
-          "income": 13
-        ],
-        "total": 18.13,
-        "lastMonth": -5,
-        "target": 5,
+        "cvi": generateCVI(),
+        "total": getRange(20, 2),
+        "lastMonth": getRange(10),
+        "target": getRange(10),
       },
     ],
     "extraData": [
       {
         "label": "Users",
-        "value": 504772,
-        "lastMonth": "5%",
-        "target": "2%",
-        "targetValue": 49400
+        "value": getRange(500000),
+        "lastMonth": getRange(10) + "%",
+        "target": getRange(10) + "%",
+        "targetValue": getRange(50000)
       },
       {
         "label": "Leads",
-        "value": 504772,
-        "lastMonth": "5%",
-        "target": "2%",
-        "targetValue": 49400
+        "value": getRange(500000),
+        "lastMonth": getRange(10) + "%",
+        "target": getRange(10) + "%",
+        "targetValue": getRange(50000)
       },
       {
         "label": "MQL",
-        "value": 504772,
-        "lastMonth": "5%",
-        "target": "2%",
-        "targetValue": 49400
+        "value": getRange(500000),
+        "lastMonth": getRange(10) + "%",
+        "target": getRange(10) + "%",
+        "targetValue": getRange(50000)
       },
       {
         "label": "SQL",
-        "value": 504772,
-        "lastMonth": "5%",
-        "target": "2%",
-        "targetValue": 49400
+        "value": getRange(500000),
+        "lastMonth": getRange(10) + "%",
+        "target": getRange(10) + "%",
+        "targetValue": getRange(50000)
       },
       {
         "label": "Customers",
-        "value": 504772,
-        "lastMonth": "5%",
-        "target": "2%",
-        "targetValue": 49400
+        "value": getRange(500000),
+        "lastMonth": getRange(10) + "%",
+        "target": getRange(10) + "%",
+        "targetValue": getRange(50000)
       },
     ]
   }));
+}
+
+
+function generateCVI() {
+  const dates = [];
+  for (let i = 0; i < 28; i++) {
+    dates.push({
+      "date": "08-" + (i > 0 ? i : "0" + i),
+      "cost": parseFloat((Math.random() * 3 + 10).toFixed(2)),
+      "income": parseFloat((Math.random() * 3 + 12).toFixed(2)),
+    });
+  }
+  return dates;
+}
+
+function getRange(max = 999999, places = 0) {
+  return parseFloat((Math.random() * max).toFixed(places));
 }

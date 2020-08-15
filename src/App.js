@@ -5,6 +5,7 @@ import { bindActionCreators } from 'redux';
 import './App.css';
 import SmallCard from './components/SmallCard';
 import MainCard from './components/MainCard';
+import SideCard from './components/SideCard';
 
 function App({ data, addTheData }) {
   return (
@@ -39,15 +40,15 @@ function App({ data, addTheData }) {
           </section>
           {/* sidebar-right */}
           <aside className="col-md-4 sidebar-right">
-            {
-              data.extraData.map((data, index) => (
-                <div className="side-card card my-3" key={index}>
-                  <div className="card-body">
-                    {data.label}
+            <div className="row">
+              {
+                data.extraData.map((data, index) => (
+                  <div className="col-md-12 col-sm-6" key={index}>
+                    <SideCard data={data} />
                   </div>
-                </div>
-              ))
-            }
+                ))
+              }
+            </div>
           </aside>
         </div>
       </div>
