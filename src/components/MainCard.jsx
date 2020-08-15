@@ -56,11 +56,11 @@ export default function MainCard({ data }) {
                         },
                         series: [
                             {
-                                name: 'Cost Per Lead',
+                                name: 'Cost Per ' + data.name,
                                 data: data.cvi.map(cvi => cvi.cost)
                             },
                             {
-                                name: 'Net Income Per Lead',
+                                name: 'Net Income Per ' + data.name,
                                 data: data.cvi.map(cvi => cvi.income)
                             },
                         ]
