@@ -79,31 +79,31 @@ function addDataToStore() {
       },
       {
         "label": "Leads",
-        "value": getRange(500000),
+        "value": getRange(25000),
         "lastMonth": getRange(10) + "%",
         "target": getRange(10) + "%",
-        "targetValue": getRange(50000)
+        "targetValue": getRange(25000)
       },
       {
         "label": "MQL",
-        "value": getRange(500000),
+        "value": getRange(3500),
         "lastMonth": getRange(10) + "%",
         "target": getRange(10) + "%",
-        "targetValue": getRange(50000)
+        "targetValue": getRange(3500)
       },
       {
         "label": "SQL",
-        "value": getRange(500000),
+        "value": getRange(2000),
         "lastMonth": getRange(10) + "%",
         "target": getRange(10) + "%",
-        "targetValue": getRange(50000)
+        "targetValue": getRange(2000)
       },
       {
         "label": "Customers",
-        "value": getRange(500000),
+        "value": getRange(500),
         "lastMonth": getRange(10) + "%",
         "target": getRange(10) + "%",
-        "targetValue": getRange(50000)
+        "targetValue": getRange(500)
       },
     ]
   }));
